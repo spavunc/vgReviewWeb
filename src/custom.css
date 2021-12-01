@@ -1,0 +1,29 @@
+.game{
+    cursor: pointer;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.game:hover{
+    background-color: lightgray;
+}
+img{
+    width:100px;
+    height: 150px
+}
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+a:active {
+    color: black;
+    text-decoration: none;
+  }
+a:visited {
+    color: black;
+    text-decoration: none;
+ }

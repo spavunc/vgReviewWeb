@@ -3,10 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Router } from "@reach/router";
+import Game from "./Game";
+import Home from "./Home";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Carousel, Row, Col, Container } from 'react-bootstrap';
+import LoginComponent from './LoginComponent';
+import LogoutComponent from './LogoutComponent';
+import RegisterComponent from './RegisterComponent';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Container>
+      <Row>
+        <App />
+      </Row>
+      <br/>
+      <Row>
+        <Router>
+          <Home path="/" />
+          <LoginComponent path="/login"/>
+          <LogoutComponent path="/logout"/>
+          <RegisterComponent path="/register"/>
+          <Game path="/game/:id" />
+        </Router>
+      </Row>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
